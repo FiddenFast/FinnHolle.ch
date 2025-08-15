@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekte - Finn Holle</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-2xl font-bold text-gray-900">Finn Holle</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-blue-600 transition duration-300">Home</a>
+                    <a href="about.html" class="text-gray-600 hover:text-blue-600 transition duration-300">Über mich</a>
+                    <a href="projects.html" class="text-blue-600 font-semibold">Projekte</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-blue-600 transition duration-300">Kontakt</a>
+                </div>
+                <button class="md:hidden text-gray-600 hover:text-blue-600 focus:outline-none" id="mobile-menu-button">
+                    <i data-feather="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Projects Section -->
+    <section class="pt-24 pb-20">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-12">Meine Projekte</h1>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Project Card 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Persönliche Webseite</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">Eine moderne, responsive Webseite zur Präsentation meiner Fähigkeiten und Projekte.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">HTML</span>
+                            <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">CSS</span>
+                            <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">JavaScript</span>
+                            <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">TailwindCSS</span>
+                        </div>
+                        <a href="https://github.com/FiddenFast" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold transition duration-300">GitHub <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i></a>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">IMS Projekte</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">Verschiedene Projekte aus der Informatikmittelschule Baden.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">Java</span>
+                            <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">Python</span>
+                            <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">Web Development</span>
+                        </div>
+                        <a href="https://github.com/FiddenFast" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold transition duration-300">Mehr erfahren <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html> 
