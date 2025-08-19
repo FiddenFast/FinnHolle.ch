@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Über mich - Finn Holle</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-2xl font-bold text-gray-900">Finn Holle</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-blue-600 transition duration-300">Home</a>
+                    <a href="about.html" class="text-blue-600 font-semibold">Über mich</a>
+                    <a href="projects.html" class="text-gray-600 hover:text-blue-600 transition duration-300">Projekte</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-blue-600 transition duration-300">Kontakt</a>
+                </div>
+                <button class="md:hidden text-gray-600 hover:text-blue-600 focus:outline-none" id="mobile-menu-button">
+                    <i data-feather="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section class="pt-24 pb-20">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-12">Über mich</h1>
+            <div class="max-w-4xl mx-auto">
+                <div class="mb-12">
+                    <h2 class="text-2xl md:text-3xl font-semibold text-gray-800 mb-6">Ausbildung</h2>
+                    <div class="space-y-6">
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <p class="font-medium text-lg">Informatikmittelschule (IMS), Baden AG</p>
+                            <p class="text-gray-600">Seit 2023 - 2. Klasse</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <p class="font-medium text-lg">Bezirksschule Bremgarten AG</p>
+                            <p class="text-gray-600">2020 – 2023</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <p class="font-medium text-lg">Primarschule Jonen AG</p>
+                            <p class="text-gray-600">2015 – 2020</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-12">
+                    <h2 class="text-2xl md:text-3xl font-semibold text-gray-800 mb-6">Sprachkenntnisse</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                            <span class="text-lg font-medium text-gray-800">Deutsch</span>
+                            <p class="text-gray-600">Muttersprache</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                            <span class="text-lg font-medium text-gray-800">Englisch</span>
+                            <p class="text-gray-600">9 Jahre Schulkenntnisse</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                            <span class="text-lg font-medium text-gray-800">Französisch</span>
+                            <p class="text-gray-600">6 Jahre Schulkenntnisse</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-2xl md:text-3xl font-semibold text-gray-800 mb-6">Interessen</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h3 class="font-medium text-lg text-gray-800 mb-2">Sport</h3>
+                            <ul class="list-disc list-inside text-gray-600 leading-relaxed">
+                                <li>Mountainbiken (RRC Amt Affoltern)</li>
+                                <li>Skifahren</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h3 class="font-medium text-lg text-gray-800 mb-2">Hobbys</h3>
+                            <ul class="list-disc list-inside text-gray-600 leading-relaxed">
+                                <li>Informatik</li>
+                                <li>Kochen</li>
+                                <li>Zeit mit Freunden</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html> 

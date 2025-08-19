@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finn Holle - Informatikstudent IMS Baden</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        feather.replace();
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-2xl font-bold text-gray-900">Finn Holle</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-blue-600 transition duration-300">Home</a>
+                    <a href="about.html" class="text-gray-600 hover:text-blue-600 transition duration-300">Über mich</a>
+                    <a href="projects.html" class="text-gray-600 hover:text-blue-600 transition duration-300">Projekte</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-blue-600 transition duration-300">Kontakt</a>
+                </div>
+                <button class="md:hidden text-gray-600 hover:text-blue-600 focus:outline-none" id="mobile-menu-button">
+                    <i data-feather="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center text-center pt-24 pb-16">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <img src="IMG_0787.JPG" alt="Porträt" class="w-56 h-56 object-cover rounded-full mx-auto mb-8 shadow-xl">
+                <h1 class="text-5xl md:text-7xl font-bold text-gray-900 mb-4 leading-tight">Finn Holle</h1>
+                <p class="text-xl md:text-2xl text-gray-600 mb-10 leading-relaxed">Informatikstudent an der IMS Baden – bereit für neue Herausforderungen</p>
+                <div class="flex flex-wrap justify-center gap-6">
+                    <a href="about.html" class="px-10 py-4 bg-blue-600 text-white text-lg font-semibold rounded-full hover:bg-blue-700 transition duration-300 shadow-lg">Über mich</a>
+                    <a href="projects.html" class="px-10 py-4 bg-white text-blue-600 text-lg font-semibold rounded-full border border-blue-600 hover:bg-gray-100 transition duration-300 shadow-lg">Meine Projekte</a>
+                    <a href="contact.html" class="px-10 py-4 bg-blue-600 text-white text-lg font-semibold rounded-full hover:bg-blue-700 transition duration-300 shadow-lg">Kontakt</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Über mich</h2>
+            <div class="max-w-3xl mx-auto">
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-4">Ausbildung</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="font-medium">Informatikmittelschule (IMS), Baden AG</p>
+                            <p class="text-gray-600">Seit 2023 - 1. Klasse</p>
+                        </div>
+                        <div>
+                            <p class="font-medium">Bezirksschule Bremgarten AG</p>
+                            <p class="text-gray-600">2020 – 2023</p>
+                        </div>
+                        <div>
+                            <p class="font-medium">Primarschule Jonen AG</p>
+                            <p class="text-gray-600">2015 – 2020</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-4">Sprachkenntnisse</h3>
+                    <div class="flex flex-wrap gap-4">
+                        <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full">Deutsch (Muttersprache)</span>
+                        <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full">Englisch (8 Jahre)</span>
+                        <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full">Französisch (5 Jahre)</span>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Interessen</h3>
+                    <div class="flex flex-wrap gap-4">
+                        <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full">Mountainbiken</span>
+                        <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full">Skifahren</span>
+                        <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full">Informatik</span>
+                        <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full">Kochen</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Meine Projekte</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Persönliche Webseite</h3>
+                        <p class="text-gray-600 mb-4">Eine moderne, responsive Webseite zur Präsentation meiner Fähigkeiten und Projekte.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">HTML</span>
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">CSS</span>
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">JavaScript</span>
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">TailwindCSS</span>
+                        </div>
+                        <a href="#" class="text-blue-600 hover:text-blue-800">GitHub →</a>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">IMS Projekte</h3>
+                        <p class="text-gray-600 mb-4">Verschiedene Projekte aus der Informatikmittelschule Baden.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Java</span>
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Python</span>
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Web Development</span>
+                        </div>
+                        <a href="#" class="text-blue-600 hover:text-blue-800">Mehr erfahren →</a>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">RRC Amt Affoltern</h3>
+                        <p class="text-gray-600 mb-4">Aktives Mitglied im Mountainbike Club RRC Amt Affoltern.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Mountainbike</span>
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Teamwork</span>
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Sport</span>
+                        </div>
+                        <a href="https://www.rrc-amt-affoltern.ch" target="_blank" class="text-blue-600 hover:text-blue-800">Club Webseite →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Kontakt</h2>
+            <div class="max-w-2xl mx-auto text-center">
+                <div class="flex flex-col items-center space-y-4">
+                    <a href="mailto:finn.holle@hotmail.com" class="flex items-center text-gray-600 hover:text-blue-600">
+                        <i data-feather="mail" class="mr-2"></i>
+                        finn.holle@hotmail.com
+                    </a>
+                    <a href="tel:+41793479995" class="flex items-center text-gray-600 hover:text-blue-600">
+                        <i data-feather="phone" class="mr-2"></i>
+                        +41 79 347 99 95
+                    </a>
+                    <a href="https://www.linkedin.com/in/finn-holle-6392b328b/" target="_blank" class="flex items-center text-gray-600 hover:text-blue-600">
+                        <i data-feather="linkedin" class="mr-2"></i>
+                        LinkedIn
+                    </a>
+                    <p class="text-gray-600 mt-4">
+                        Panoramaweg 6<br>
+                        8916 Jonen<br>
+                        Schweiz
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html> 
