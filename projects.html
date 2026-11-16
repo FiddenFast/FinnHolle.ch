@@ -1,70 +1,142 @@
-<!DOCTYPE html>
-<html lang="de">
+<!doctype html>
+<html lang="de-CH">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projekte - Finn Holle</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Projekte von Finn Holle: interaktiver Lernplaner, Portfolio, Flask-Webapp, Datenanalyse mit Python und ein Konsolenprogramm in C#.">
+    <meta name="theme-color" content="#f8f8f6">
+    <title>Projekte · Finn Holle</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://unpkg.com/feather-icons"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
 </head>
-<body class="bg-gray-100 text-gray-800 font-sans">
-    <!-- Navigation -->
-    <nav class="fixed w-full bg-white shadow-md z-50">
-        <div class="container mx-auto px-6 py-4">
-            <div class="flex justify-between items-center">
-                <a href="index.html" class="text-2xl font-bold text-gray-900">Finn Holle</a>
-                <div class="hidden md:flex space-x-8">
-                    <a href="index.html" class="text-gray-600 hover:text-blue-600 transition duration-300">Home</a>
-                    <a href="about.html" class="text-gray-600 hover:text-blue-600 transition duration-300">Über mich</a>
-                    <a href="projects.html" class="text-blue-600 font-semibold">Projekte</a>
-                    <a href="contact.html" class="text-gray-600 hover:text-blue-600 transition duration-300">Kontakt</a>
-                </div>
-                <button class="md:hidden text-gray-600 hover:text-blue-600 focus:outline-none" id="mobile-menu-button">
-                    <i data-feather="menu" class="w-6 h-6"></i>
-                </button>
-            </div>
+<body>
+    <a class="skip-link" href="#main">Zum Inhalt</a>
+    <header class="site-header">
+        <div class="shell header-inner">
+            <a class="wordmark" href="index.html" aria-label="Finn Holle, Startseite">
+                <span class="monogram" aria-hidden="true">FH</span><span>Finn Holle</span>
+            </a>
+            <button class="menu-toggle" type="button" aria-label="Menü" aria-expanded="false" aria-controls="site-menu" data-menu-toggle><span aria-hidden="true"></span></button>
+            <nav id="site-menu" class="site-menu" aria-label="Hauptnavigation" data-site-menu>
+                <a href="about.html">Über mich</a>
+                <a href="index.html#skills">Skills</a>
+                <a href="projects.html" aria-current="page">Projekte</a>
+                <a href="contact.html" class="nav-contact">Kontakt</a>
+            </nav>
         </div>
-    </nav>
+    </header>
 
-    <!-- Projects Section -->
-    <section class="pt-24 pb-20">
-        <div class="container mx-auto px-6">
-            <h1 class="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-12">Meine Projekte</h1>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <!-- Project Card 1 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Persönliche Webseite</h3>
-                        <p class="text-gray-600 mb-4 leading-relaxed">Eine moderne, responsive Webseite zur Präsentation meiner Fähigkeiten und Projekte.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">HTML</span>
-                            <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">CSS</span>
-                            <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">JavaScript</span>
-                            <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">TailwindCSS</span>
-                        </div>
-                        <a href="https://github.com/FiddenFast" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold transition duration-300">GitHub <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i></a>
-                    </div>
-                </div>
+    <main class="shell subpage" id="main">
+        <header class="page-heading">
+            <h1>Meine Projekte<span>.</span></h1>
+            <p>Ein Lernplaner zum Ausprobieren, meine eigene Website und drei Arbeiten aus der IMS Baden.</p>
+        </header>
 
-                <!-- Project Card 2 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">IMS Projekte</h3>
-                        <p class="text-gray-600 mb-4 leading-relaxed">Verschiedene Projekte aus der Informatikmittelschule Baden.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">Java</span>
-                            <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">Python</span>
-                            <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">Web Development</span>
-                        </div>
-                        <a href="https://github.com/FiddenFast" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold transition duration-300">Mehr erfahren <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i></a>
-                    </div>
+        <article class="featured-project" id="lernplaner">
+            <div class="featured-project-copy">
+                <p class="project-tools">JavaScript · LocalStorage</p>
+                <h2>Lernplaner für die Woche</h2>
+                <p>Der Planer verteilt Aufgaben nach Abgabetermin auf die nächsten sieben Tage. Wenn ein Tagesbudget ausgeschöpft ist, zeigt er die noch unverplante Zeit an. Aufgaben und Einstellungen bleiben in deinem Browser gespeichert.</p>
+                <div class="featured-actions">
+                    <a class="button" href="projekte/lernplaner/">Lernplaner öffnen <span aria-hidden="true">›</span></a>
+                    <a class="text-link" href="https://github.com/FiddenFast/FinnHolle.ch/tree/main/projekte/lernplaner">Quellcode <span aria-hidden="true">↗</span></a>
                 </div>
             </div>
-        </div>
-    </section>
+            <div class="featured-project-art" aria-hidden="true">
+                <div class="plan-preview">
+                    <div class="mini-bar"><i></i><i></i><i></i></div>
+                    <div class="mini-week"><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span></div>
+                </div>
+            </div>
+        </article>
 
-    <script src="script.js"></script>
+        <div class="project-grid">
+            <article class="project-card" id="portfolio">
+                <div class="project-art art-web" aria-hidden="true">
+                    <div class="mini-browser">
+                        <div class="mini-bar"><i></i><i></i><i></i></div>
+                        <div class="mini-page">
+                            <div class="mini-copy"><span></span><span></span><i></i></div>
+                            <div class="mini-portrait"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <p class="project-tools">HTML · CSS · JavaScript · Netlify</p>
+                    <h2>Persönliche Website</h2>
+                    <p>Ich habe mein Portfolio als statische Website aufgebaut und über Netlify veröffentlicht. Es zeigt meine Projekte, meinen Ausbildungsweg und Kontaktmöglichkeiten.</p>
+                    <ul class="project-notes">
+                        <li>Vier Seiten mit gemeinsamem Layout und mobiler Navigation</li>
+                        <li>Kontaktformular mit EmailJS</li>
+                    </ul>
+                    <a class="text-link" href="https://github.com/FiddenFast/FinnHolle.ch">Quellcode ansehen <span aria-hidden="true">↗</span></a>
+                </div>
+            </article>
+            <article class="project-card" id="flask">
+                <div class="project-art art-code" aria-hidden="true">
+                    <div class="mini-terminal">
+                        <div class="mini-bar"><i></i><i></i><i></i></div>
+                        <div class="mini-code"><span></span><span></span><span></span><span></span><span></span></div>
+                        <span class="code-symbol">&lt;/&gt;</span>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <p class="project-tools">Python · Flask · pytest · GitHub Actions</p>
+                    <h2>Flask-Webanwendung</h2>
+                    <p>Für ein Schulprojekt habe ich eine Webapp gebaut, die Einträge über ein Formular entgegennimmt, im Arbeitsspeicher hält und auf der Startseite anzeigt.</p>
+                    <ul class="project-notes">
+                        <li>Automatisierter Test für das Anlegen eines Eintrags</li>
+                        <li>GitHub-Actions-Workflow für Azure Web Apps</li>
+                    </ul>
+                    <a class="text-link" href="https://github.com/FiddenFast/HolleFinnLB-324">Quellcode ansehen <span aria-hidden="true">↗</span></a>
+                </div>
+            </article>
+            <article class="project-card" id="datenanalyse">
+                <div class="project-art art-data" aria-hidden="true">
+                    <div class="mini-browser mini-sheet">
+                        <div class="mini-bar"><i></i><i></i><i></i></div>
+                        <div class="mini-sheet-grid"></div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <p class="project-tools">Python · pandas · scikit-learn · Jupyter</p>
+                    <h2>Pizza-Bestellungen analysieren</h2>
+                    <p>In einem Schulprojekt habe ich synthetische Bestelldaten ausgewertet und untersucht, wie sich der Bestellwert aus Stückpreis und Menge schätzen lässt.</p>
+                    <ul class="project-notes">
+                        <li>Bestelldaten mit pandas aufbereitet</li>
+                        <li>Lineare Regression mit getrennten Testdaten ausgewertet</li>
+                    </ul>
+                    <a class="text-link" href="https://github.com/FiddenFast/LB259">Notebooks ansehen <span aria-hidden="true">↗</span></a>
+                </div>
+            </article>
+            <article class="project-card" id="dotnet">
+                <div class="project-art art-dotnet" aria-hidden="true">
+                    <div class="mini-terminal">
+                        <div class="mini-bar"><i></i><i></i><i></i></div>
+                        <div class="mini-code"><span></span><span></span><span></span><span></span><span></span></div>
+                        <span class="code-symbol">C#</span>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <p class="project-tools">C# · .NET</p>
+                    <h2>Konsolenprogramm in C#</h2>
+                    <p>In der Konsole lassen sich beliebig viele Texte eingeben. Sobald man die Eingabe beendet, gibt das Programm alle Einträge als nummerierte Liste aus.</p>
+                    <p>In diesem Projekt habe ich mit Schleifen, Bedingungen und <code>List&lt;string&gt;</code> gearbeitet.</p>
+                    <a class="text-link" href="https://github.com/FiddenFast/Lernperiode-2/blob/main/Program.cs">Quellcode ansehen <span aria-hidden="true">↗</span></a>
+                </div>
+            </article>
+        </div>
+        <a class="text-link more-projects" href="https://github.com/FiddenFast?tab=repositories">Alle Repositories auf GitHub <span aria-hidden="true">↗</span></a>
+    </main>
+
+    <footer class="site-footer">
+        <div class="shell footer-inner">
+            <span>Finn Holle</span>
+            <nav aria-label="Externe Profile">
+                <a href="https://github.com/FiddenFast">GitHub <span aria-hidden="true">↗</span></a>
+                <a href="https://www.linkedin.com/in/finn-holle-6392b328b/">LinkedIn <span aria-hidden="true">↗</span></a>
+            </nav>
+        </div>
+    </footer>
 </body>
-</html> 
+</html>

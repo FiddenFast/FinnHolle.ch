@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Plane deine Lernaufgaben für die nächsten sieben Tage anhand von Aufwand, Abgabetermin und verfügbarer Zeit.">
+    <meta name="theme-color" content="#f8f8f6">
+    <title>Lernplaner · Finn Holle</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="planner.css">
+    <script src="plan.js" defer></script>
+    <script src="planner.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Zum Inhalt</a>
+    <header class="site-header">
+        <div class="shell header-inner">
+            <a class="wordmark" href="../../index.html" aria-label="Finn Holle, Startseite">
+                <span class="monogram" aria-hidden="true">FH</span><span>Finn Holle</span>
+            </a>
+            <a class="text-link" href="../../projects.html#lernplaner"><span aria-hidden="true">‹</span> Zum Projekt</a>
+        </div>
+    </header>
+
+    <main class="shell planner-main" id="main">
+        <header class="page-heading planner-heading">
+            <h1>Lernplaner<span>.</span></h1>
+            <p>Trage deine Aufgaben ein. Der Plan verteilt sie ab heute auf sieben Tage und berücksichtigt deine Abgabetermine.</p>
+        </header>
+
+        <noscript><p class="planner-notice">Aktiviere JavaScript, um den Lernplan zu berechnen.</p></noscript>
+        <p class="planner-notice" id="storage-notice" role="status" hidden>Die Aufgaben bleiben für diese Sitzung verfügbar. Dein Browser erlaubt derzeit keine lokale Speicherung.</p>
+
+        <div class="planner-layout">
+            <div class="planner-sidebar">
+                <section class="surface planner-panel" aria-labelledby="task-heading">
+                    <h2 id="task-heading">Aufgabe hinzufügen</h2>
+                    <form id="task-form" class="task-form">
+                        <div class="field">
+                            <label for="task-title">Aufgabe</label>
+                            <input id="task-title" name="title" placeholder="z. B. Matheaufgaben lösen" required maxlength="100">
+                        </div>
+                        <div class="task-form-row">
+                            <div class="field">
+                                <label for="task-minutes">Aufwand in Min.</label>
+                                <input id="task-minutes" name="minutes" type="number" inputmode="numeric" min="1" max="10080" value="45" required>
+                            </div>
+                            <div class="field">
+                                <label for="task-deadline">Abgabe</label>
+                                <input id="task-deadline" name="deadline" type="date" required>
+                            </div>
+                        </div>
+                        <button class="button" type="submit" id="task-submit" disabled>Aufgabe hinzufügen</button>
+                    </form>
+                    <div class="planner-setting">
+                        <label for="daily-budget">Lernzeit pro Tag</label>
+                        <select id="daily-budget" name="daily-budget" disabled>
+                            <option value="30">30 Min.</option>
+                            <option value="45">45 Min.</option>
+                            <option value="60">1 Std.</option>
+                            <option value="90" selected>1 Std. 30 Min.</option>
+                            <option value="120">2 Std.</option>
+                            <option value="180">3 Std.</option>
+                            <option value="240">4 Std.</option>
+                        </select>
+                    </div>
+                </section>
+
+                <section class="surface planner-panel task-panel" aria-labelledby="list-heading">
+                    <div class="planner-panel-heading">
+                        <h2 id="list-heading">Aufgaben</h2>
+                        <span id="task-count">0</span>
+                    </div>
+                    <p id="task-empty">Noch keine Aufgaben eingetragen.</p>
+                    <button class="text-link example-button" type="button" data-load-example disabled>Beispiel laden <span aria-hidden="true">›</span></button>
+                    <ul class="task-list" id="task-list"></ul>
+                    <p class="planner-status" id="planner-message" role="status" aria-live="polite"></p>
+                </section>
+            </div>
+
+            <section class="surface planner-panel week-panel" aria-labelledby="week-heading">
+                <div class="planner-panel-heading week-heading">
+                    <h2 id="week-heading">Deine Woche</h2>
+                    <p id="plan-range"></p>
+                </div>
+                <dl class="plan-stats">
+                    <div><dt>Verplant</dt><dd id="planned-minutes">0 Min.</dd></div>
+                    <div><dt>Unverplant</dt><dd id="open-minutes">0 Min.</dd></div>
+                </dl>
+                <ol id="week-list" class="week-list"></ol>
+                <section id="planner-unplanned" class="unplanned" aria-labelledby="unplanned-heading" hidden>
+                    <h3 id="unplanned-heading">Unverplante Aufgaben</h3>
+                    <ul id="unplanned-list"></ul>
+                </section>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="shell footer-inner">
+            <span>Ein Projekt im Portfolio von Finn Holle</span>
+            <a href="https://github.com/FiddenFast/FinnHolle.ch/tree/main/projekte/lernplaner">Quellcode auf GitHub <span aria-hidden="true">↗</span></a>
+        </div>
+    </footer>
+</body>
+</html>
